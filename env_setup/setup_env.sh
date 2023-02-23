@@ -44,7 +44,7 @@ else
 fi
 
 # activate environment
-$CONDA env create --name "$ENV_NAME" --file test_env.yml
+$CONDA env create --name "$ENV_NAME" --file env.yml
 conda activate "$ENV_NAME"
 
 # check that environment is activated
@@ -56,7 +56,7 @@ if [[ "$ACT_ENV" != "$ENV_NAME" ]]; then
   exit 1
 fi
 
-# Rscript setup_env.r # install the R packages not available through conda
+Rscript setup_env.r # install the R packages not available through conda
 
 # install ipykernel and irkernel if not already installed
 if [[ $KERNEL == true ]]
