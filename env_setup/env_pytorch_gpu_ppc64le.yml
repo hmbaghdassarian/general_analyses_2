@@ -1,0 +1,11 @@
+name: env_name
+channels:
+  - https://ftp.osuosl.org/pub/open-ce/current # most recent channel for cuda+pytorch on ppc64le (Satori)
+dependencies:    
+    - pytorch
+
+
+
+# THIS IS A MINIMAL .YML FILE TO GENERATE A CONDA ENVIRONMENT WITH GPU-ENABLED PYTORCH
+# SPECIFICALLY FOR ppc64le BUILDS
+# if using another OS, see "env_pytorch_gpu.yml" instead 
