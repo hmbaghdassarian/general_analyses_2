@@ -1,0 +1,18 @@
+name: env_name
+channels:
+  - conda-forge
+  - pytorch
+  - nvidia
+dependencies:    
+#    - python==3.10
+    - nvidia::cuda-toolkit
+    - pytorch::pytorch-cuda=11.8#11.6
+    - pytorch::torchvision
+    - pytorch::torchaudio
+    - pytorch::pytorch=*=*cuda*
+# useful links for NVIDIA GPU in conda environment: 
+# https://stackoverflow.com/questions/71162459/why-does-anaconda-install-pytorch-cpuonly-when-i-install-cuda
+# https://github.com/mamba-org/mamba/issues/2194
+
+# THIS IS A MINIMAL .YML FILE TO GENERATE A CONDA ENVIRONMENT WITH GPU-ENABLED PYTORCH
+# if GPU is not needed, you can just install pytorch (- pytorch::pytorch)
