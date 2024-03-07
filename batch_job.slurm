@@ -14,7 +14,10 @@
 #SBATCH --time=11:59:59
 
 ## User python environment
-ENV_NAME="ccc_protocols"
+ENV_NAME="scLEMBAS"
+CONDA_PATH="/nobackup/users/hmbaghda/Software/miniforge3/"
 
+
+source ${CONDA_PATH}/etc/profile.d/conda.sh
 conda activate $ENV_NAME
 python 01_process_data.py
